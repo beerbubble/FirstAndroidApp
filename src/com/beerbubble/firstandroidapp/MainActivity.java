@@ -5,6 +5,8 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,7 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends BaseActivity {
-
+    
 	public MainActivity() {
 		super(R.string.app_name);
 	}
@@ -22,8 +24,10 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         
     	//setSlidingActionBarEnabled(true);
-    	
+        
         setContentView(R.layout.activity_main);
+        
+
     }
 
 
