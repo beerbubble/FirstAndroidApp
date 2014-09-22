@@ -8,16 +8,15 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/header_background" >
+        android:background="@drawable/header_background_new" >
 
-        <TextView
+        <ImageView
             android:id="@+id/header_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/jin_name"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:background="@drawable/title"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:id="@+id/header_search_img_lin"
@@ -31,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dip"
-                android:background="@drawable/icon_search"
+                android:background="@drawable/icon_search_new"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 
@@ -47,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
-                android:background="@drawable/icon_menu"
+                android:background="@drawable/icon_menu_new"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
     </RelativeLayout>
@@ -55,67 +54,91 @@
     <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_alignParentBottom="true"
-        android:baselineAligned="false"
-        android:gravity="center_vertical"
+        android:background="@drawable/footer_background"
         android:orientation="horizontal"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip" >
+        android:weightSum="3" >
 
-        <LinearLayout
-            android:id="@+id/menu_hat_Lin"
-            android:layout_width="70dip"
-            android:layout_height="70dip"
-            android:layout_marginBottom="3dip"
-            android:layout_marginTop="3dip"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical" >
+        <RelativeLayout
+            android:id="@+id/footer_home_Lin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
 
-            <ImageView
-                android:id="@+id/menu_hat_img"
+            <TextView
+                android:id="@+id/footer_home_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/icon_hat"
+                android:layout_centerInParent="true"
+                android:text="@string/Tab_Home"
+                android:textColor="@color/menutab"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 tools:ignore="ContentDescription" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menu_measuring_Lin"
-            android:layout_width="70dip"
-            android:layout_height="70dip"
-            android:layout_marginBottom="3dip"
-            android:layout_marginTop="3dip"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical" >
 
             <ImageView
-                android:id="@+id/menu_measuring_img"
+                android:id="@+id/footer_home_bottomline"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/menutab"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/footer_menu_Lin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/footer_menu_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/icon_measuring"
+                android:layout_centerInParent="true"
+                android:text="@string/Tab_MENU"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 tools:ignore="ContentDescription" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menu_spoon_Lin"
-            android:layout_width="70dip"
-            android:layout_height="70dip"
-            android:layout_marginBottom="3dip"
-            android:layout_marginTop="3dip"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical" >
 
             <ImageView
-                android:id="@+id/menu_spoon_img"
+                android:id="@+id/footer_menu_bottomline"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/menutab"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/footer_stores_Lin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/footer_stores_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/icon_spoon"
+                android:layout_centerInParent="true"
+                android:text="@string/Tab_STORES"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 tools:ignore="ContentDescription" />
-        </LinearLayout>
+
+            <ImageView
+                android:id="@+id/footer_stores_bottomline"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/menutab"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
     </LinearLayout>
 
     <RelativeLayout
