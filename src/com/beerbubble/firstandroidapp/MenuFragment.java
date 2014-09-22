@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class MenuFragment extends Fragment {
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.list, null);
+		return inflater.inflate(R.layout.menu_fragment, null);
 	}
 
 	public void onActivityCreated(Bundle savedInstanceState) {
